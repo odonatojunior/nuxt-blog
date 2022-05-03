@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: [
@@ -10,23 +10,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'plants': "url('/assets/images/plants.png')"
-      }
+      fontFamily: {
+        display: ["Inter", "sans-serif"],
+        sans: ["Lato", "sans-serif"],
+        serif: ["Merriweather", "serif"],
+      },
+      colors: {
+        primary: "#10E063",
+        secondary: "#1A73E8",
+        background: "#111",
+      },
     },
-    fontFamily: {
-      display: ['Inter', 'sans-serif'],
-      sans: ['Lato', 'sans-serif'],
-      serif: ['Merriweather', 'serif']
-    },
-    colors:{
-      'primary': '#10E063',
-      'secondary': '#1A73E8',
-      'background': '#111',
-      ...colors
-    }
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
-}
+  plugins: [require("@tailwindcss/typography")],
+};

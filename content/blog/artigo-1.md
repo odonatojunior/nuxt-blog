@@ -3,6 +3,7 @@ title: Primeiro post com Nuxt Content
 description: Learn how to use @nuxt/content.
 tags: Desenvolvimento
 image: artigo-1/artigo-1.jpg
+imageDescription: Image that shows something
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima distinctio, dolorum at voluptas numquam neque iure fuga quidem voluptatum labore similique itaque quia aliquid molestiae veritatis pariatur dignissimos ipsam mollitia!

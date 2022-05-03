@@ -15,7 +15,10 @@
       prose-img:border-2
       prose-img:border-white/30
       prose-img:mb-1
-      prose-li:marker:text-primary
+      prose-li:marker:text-secondary
+      prose-blockquote:border-l-secondary
+      prose-pre:border-2
+      prose-pre:border-white/30
     "
     :class="classes"
   ></nuxt-content>

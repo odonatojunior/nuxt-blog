@@ -1,4 +1,7 @@
 import tailwindcss from "tailwindcss";
+import getSiteMeta from "./utils/getSiteMeta";
+
+const meta = getSiteMeta();
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -6,11 +9,12 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Donato',
+    title: 'Donato Jr.',
     htmlAttrs: {
       lang: 'pt-BR'
     },
     meta: [
+      ...meta,
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
@@ -53,6 +57,7 @@ export default {
       '~/components/Layout',
       '~/components/Texts',
       '~/components/Badge',
+      '~/components/Buttons',
     ]
   },
 

@@ -6,11 +6,12 @@
         class="h-48 w-full object-cover rounded-md my-4"
         v-if="content.image"
         :src="content.image"
-        alt=""
+        :alt="content.imageDescription"
+        loading="lazy"
       />
       <div
         v-if="!content.image && isPost"
-        class="flex justify-center items-center h-48 w-full object-cover rounded-md my-4"
+        class="flex justify-center items-center h-32 md:h-48 w-full object-cover rounded-md my-4"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

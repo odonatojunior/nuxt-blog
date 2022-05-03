@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import getSiteMeta from '~/utils/getSiteMeta';
 export default {
   async asyncData({ $content, params }) {
     const content = await $content(`projects/${params.slug}`).fetch();
@@ -18,33 +19,22 @@ export default {
       this.$router.back();
     },
   },
+  computed: {
+    meta() {
+      const metaData = {
+        type: "article",
+        title: this.content.title,
+        description: this.content.description,
+        url: `https://odonatojunior.github.io/articles/${this.$route.params.slug}`
+      }
+      return getSiteMeta(metaData);
+    }
+  },
   head() {
     return {
-      title: this.content.title,
+      title: `${this.content.title} | Donato Jr.`,
       meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: this.content.description,
-        },
-        // Open Graph
-        { hid: "og:title", property: "og:title", content: this.content.title },
-        {
-          hid: "og:description",
-          property: "og:description",
-          content: this.content.description,
-        },
-        // Twitter Card
-        {
-          hid: "twitter:title",
-          name: "twitter:title",
-          content: this.content.title,
-        },
-        {
-          hid: "twitter:description",
-          name: "twitter:description",
-          content: this.content.description,
-        },
+        ...this.meta,
       ],
     };
   },
